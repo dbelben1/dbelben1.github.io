@@ -1,312 +1,499 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-  <meta charset="UTF-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-  <title>Mobile Cryotherapy vs In-Office | Sonoma County</title>
-
-  <meta name="description" content="Compare mobile cryotherapy vs in-office treatments in Sonoma County and learn why localized cryotherapy may offer more targeted results, convenience, and recovery benefits.">
-
-
-
-  <link rel="canonical" href="https://sonomacryotherapyguide.com/mobile-vs-in-office-cryotherapy">
-
-
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sonoma Cryotherapy Guide</title>
+  <meta
+    name="description"
+    content="Learn about cryotherapy in Sonoma County, including benefits, treatment types, and local options."
+  />
   <style>
-
-    body {
-
-      font-family: Arial, sans-serif;
-
-      line-height: 1.6;
-
-      margin: 0;
-
-      padding: 0;
-
-      background-color: #ffffff;
-
-      color: #111;
-
+    :root{
+      --bg:#dfe3e7;
+      --page:#f6f7f8;
+      --white:#ffffff;
+      --text:#233142;
+      --muted:#5d6b78;
+      --blue:#2f5f95;
+      --blue-dark:#204d7d;
+      --green:#77a53b;
+      --line:#d7dde3;
+      --soft:#eef3f7;
+      --card:#fbfbfb;
+      --shadow:0 1px 2px rgba(0,0,0,.08);
+      --radius:4px;
+      --max:960px;
     }
 
-    .container {
-
-      max-width: 800px;
-
-      margin: auto;
-
-      padding: 40px 20px;
-
+    * { box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: Georgia, "Times New Roman", serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.45;
     }
 
-    h1 {
-
-      font-size: 28px;
-
-      margin-bottom: 20px;
-
+    img{
+      max-width:100%;
+      display:block;
     }
 
-    h2 {
-
-      margin-top: 40px;
-
-      font-size: 22px;
-
+    a{
+      color:inherit;
+      text-decoration:none;
     }
 
-    h3 {
-
-      margin-top: 20px;
-
+    .site{
+      width:min(var(--max), calc(100% - 32px));
+      margin:20px auto 40px;
+      background:var(--page);
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:var(--shadow);
     }
 
-    p {
-
-      margin-bottom: 20px;
-
+    /* Header */
+    .topbar{
+      background:#fff;
+      padding:22px 28px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      border-bottom:1px solid #e8ecef;
     }
 
-    ul {
-
-      margin-bottom: 20px;
-
-      padding-left: 20px;
-
+    .brand{
+      font-size:28px;
+      font-weight:700;
+      line-height:1;
+      letter-spacing:.2px;
+      white-space:nowrap;
     }
 
-    a {
+    .brand .green{ color:var(--green); }
+    .brand .blue{ color:var(--blue); }
 
-      color: #0077cc;
-
-      text-decoration: none;
-
+    .nav{
+      display:flex;
+      flex-wrap:wrap;
+      gap:22px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size:14px;
+      color:#222;
     }
 
-    a:hover {
-
-      text-decoration: underline;
-
+    .nav a{
+      position:relative;
     }
 
-    .footer {
-
-      font-size: 12px;
-
-      color: #666;
-
-      margin-top: 40px;
-
+    .nav a.active{
+      font-weight:700;
+      text-decoration:underline;
+      text-underline-offset:3px;
     }
 
+    /* Hero */
+    .hero{
+      position:relative;
+      min-height:290px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:36px 24px;
+      background:
+        linear-gradient(rgba(40,38,35,.22), rgba(40,38,35,.22)),
+        url("images/sonoma-hero.jpg") center/cover no-repeat;
+    }
+
+    .hero-content{
+      max-width:760px;
+      color:#fff;
+      text-shadow:0 2px 8px rgba(0,0,0,.28);
+    }
+
+    .hero h1{
+      margin:0 0 10px;
+      font-size:clamp(34px, 5vw, 56px);
+      line-height:1.08;
+      font-weight:700;
+    }
+
+    .hero p{
+      margin:0;
+      font-size:clamp(16px, 2vw, 20px);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Four cards */
+    .icon-grid{
+      padding:18px 24px 20px;
+      background:#fff;
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:16px;
+    }
+
+    .icon-card{
+      background:var(--card);
+      border:1px solid #e3e6e9;
+      border-radius:var(--radius);
+      text-align:center;
+      padding:22px 14px 18px;
+      box-shadow:var(--shadow);
+      min-height:145px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      gap:10px;
+    }
+
+    .icon{
+      font-size:44px;
+      line-height:1;
+    }
+
+    .icon.blue{ color:#3f7ab6; }
+    .icon.red{ color:#d94f68; }
+
+    .icon-card h2{
+      margin:0;
+      color:var(--blue-dark);
+      font-size:24px;
+      line-height:1.22;
+      font-weight:700;
+    }
+
+    /* Intro section */
+    .intro{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+      padding:26px 28px;
+      background:#edf2f6;
+      border-top:1px solid #e3e7eb;
+      border-bottom:1px solid #e3e7eb;
+      align-items:center;
+    }
+
+    .intro-copy h2{
+      margin:0 0 12px;
+      color:var(--blue-dark);
+      font-size:28px;
+      line-height:1.15;
+    }
+
+    .intro-copy .rule{
+      width:230px;
+      height:2px;
+      background:#c7d5e4;
+      margin:0 0 18px;
+    }
+
+    .intro-copy p{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size:18px;
+      color:#1e2a34;
+      max-width:420px;
+    }
+
+    .intro-image img{
+      width:100%;
+      height:240px;
+      object-fit:cover;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    /* Two feature cards */
+    .feature-grid{
+      padding:26px 28px;
+      background:#f3f4f6;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      border-bottom:1px solid #e2e6ea;
+    }
+
+    .feature-card{
+      background:#fdfcfb;
+      border:1px solid #dfdfdf;
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+
+    .feature-card img{
+      width:100%;
+      height:195px;
+      object-fit:cover;
+    }
+
+    .feature-body{
+      padding:18px 20px 20px;
+    }
+
+    .feature-body h3{
+      margin:0 0 12px;
+      color:var(--blue-dark);
+      font-size:24px;
+      line-height:1.18;
+    }
+
+    .feature-body .rule{
+      width:100%;
+      max-width:340px;
+      height:2px;
+      background:#dfdfdf;
+      margin:0 0 14px;
+    }
+
+    .feature-body p{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      color:#2f3942;
+      font-size:17px;
+    }
+
+    /* CTA section */
+    .cta{
+      position:relative;
+      text-align:center;
+      padding:38px 24px 52px;
+      background:
+        radial-gradient(1200px 180px at 50% 100%, rgba(255,255,255,.28), transparent 60%),
+        linear-gradient(180deg, #edf8ff 0%, #d9eefc 100%);
+      overflow:hidden;
+    }
+
+    .cta::before,
+    .cta::after{
+      content:"";
+      position:absolute;
+      left:-5%;
+      width:110%;
+      height:120px;
+      background-repeat:no-repeat;
+      background-size:100% 100%;
+      opacity:.28;
+      pointer-events:none;
+    }
+
+    .cta::before{
+      bottom:38px;
+      background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 140' preserveAspectRatio='none'><path d='M0,70 C150,10 300,130 450,70 C600,10 750,130 900,70 C1050,10 1150,95 1200,70 L1200,140 L0,140 Z' fill='%236aa9dc'/></svg>");
+    }
+
+    .cta::after{
+      bottom:-4px;
+      background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 140' preserveAspectRatio='none'><path d='M0,80 C120,120 240,20 360,60 C480,100 600,20 720,60 C840,100 960,20 1080,60 C1140,80 1170,90 1200,84 L1200,140 L0,140 Z' fill='%2385bde8'/></svg>");
+    }
+
+    .cta h2{
+      position:relative;
+      z-index:1;
+      margin:0 0 14px;
+      color:var(--blue-dark);
+      font-size:32px;
+      line-height:1.15;
+    }
+
+    .cta .rule{
+      position:relative;
+      z-index:1;
+      width:min(620px, 90%);
+      height:2px;
+      background:#bfd7ea;
+      margin:0 auto 18px;
+    }
+
+    .cta p{
+      position:relative;
+      z-index:1;
+      margin:0 0 26px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size:18px;
+      color:#24313c;
+    }
+
+    .btn{
+      position:relative;
+      z-index:1;
+      display:inline-block;
+      background:linear-gradient(180deg, #2f5f95 0%, #234b78 100%);
+      color:#fff;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size:22px;
+      font-weight:700;
+      padding:14px 34px;
+      border-radius:3px;
+      box-shadow:0 2px 4px rgba(0,0,0,.18);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .icon-grid{
+        grid-template-columns:repeat(2, 1fr);
+      }
+
+      .intro,
+      .feature-grid{
+        grid-template-columns:1fr;
+      }
+
+      .intro-copy p{
+        max-width:none;
+      }
+
+      .intro-image img{
+        height:260px;
+      }
+    }
+
+    @media (max-width: 640px){
+      .topbar{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .brand{
+        font-size:24px;
+      }
+
+      .nav{
+        gap:14px 18px;
+        font-size:13px;
+      }
+
+      .hero{
+        min-height:240px;
+      }
+
+      .icon-grid{
+        grid-template-columns:1fr;
+      }
+
+      .icon-card h2{
+        font-size:22px;
+      }
+
+      .intro,
+      .feature-grid{
+        padding-left:18px;
+        padding-right:18px;
+      }
+
+      .feature-body h3,
+      .intro-copy h2,
+      .cta h2{
+        font-size:26px;
+      }
+
+      .btn{
+        font-size:20px;
+        padding:12px 26px;
+      }
+    }
   </style>
-
 </head>
-
-
-
 <body>
-
-  <div class="container">
-
-
-
-    <h1>Mobile Cryotherapy vs In-Office Cryotherapy in Sonoma County (Which Is Better?)</h1>
-
-
-
-    <p>
-
-      When comparing <strong>mobile cryotherapy in Sonoma County</strong> to traditional in-office cryotherapy, the difference comes down to precision, convenience, and overall experience. Across Sonoma County, more individuals are choosing mobile cryotherapy as a modern alternative to clinic-based treatments.
-
-    </p>
-
-
-
-    <p>
-
-      Unlike fixed-location clinics, mobile cryotherapy brings targeted cold therapy directly to your home, gym, or workspace, allowing for more personalized sessions without the need to travel. For those looking to better understand how this approach works in real-world settings, you can 
-
-      <a href="https://mobilecryopro.com" target="_blank">learn more about mobile cryotherapy services in Sonoma County here</a>.
-
-    </p>
-
-
-
-    <p>
-
-      For those deciding between mobile and in-office cryotherapy, understanding how each approach differs in application, intensity, and convenience is key.
-
-    </p>
-
-
-
-    <h2>Mobile Cryotherapy vs In-Office Treatment</h2>
-
-
-
-    <h3>Mobile Cryotherapy</h3>
-
-    <ul>
-
-      <li>Delivered directly to your location</li>
-
-      <li>Targets specific areas of discomfort</li>
-
-      <li>More focused and controlled cold exposure</li>
-
-      <li>No waiting rooms or commute</li>
-
-    </ul>
-
-
-
-    <h3>In-Office Cryotherapy</h3>
-
-    <ul>
-
-      <li>Requires travel to a clinic</li>
-
-      <li>Often uses whole-body chambers</li>
-
-      <li>Less control over localized treatment</li>
-
-      <li>Fixed appointment structure</li>
-
-    </ul>
-
-
-
-    <h2>Why Localized Cryotherapy Can Be More Effective</h2>
-
-
-
-    <p>
-
-      Localized cryotherapy focuses the cold directly on the area of concern rather than distributing it across the entire body. This targeted approach may support temporary pain relief, reduced inflammation, and faster recovery after physical activity.
-
-    </p>
-
-
-
-    <p>
-
-      Because the cold is applied more precisely, sessions can be tailored to individual needs rather than using a one-size-fits-all method. If you're interested in how targeted treatments are applied, you can 
-
-      <a href="https://mobilecryopro.com" target="_blank">see how mobile cryotherapy treatments work in Sonoma County</a>.
-
-    </p>
-
-
-
-    <h2>Convenience Without Compromise</h2>
-
-
-
-    <p>
-
-      One of the biggest advantages of mobile cryotherapy is convenience. There’s no need to drive across town, sit in a waiting room, or adjust your schedule around a clinic.
-
-    </p>
-
-
-
-    <p>
-
-      Instead, treatments are performed at your location, making it easier to stay consistent with sessions. Many clients find that this flexibility makes a significant difference in maintaining a regular recovery routine. You can 
-
-      <a href="https://mobilecryopro.com" target="_blank">explore mobile cryotherapy options available near you</a>.
-
-    </p>
-
-
-
-    <h2>A More Comfortable Experience</h2>
-
-
-
-    <p>
-
-      Unlike stepping into an extremely cold chamber, localized mobile cryotherapy offers a more controlled and gradual experience. Sessions are one-on-one, adjustable in intensity, and focused only where needed.
-
-    </p>
-
-
-
-    <p>
-
-      This allows for a more approachable experience, especially for those new to cryotherapy. To better understand the overall benefits and approach, you can 
-
-      <a href="https://mobilecryopro.com" target="_blank">discover mobile cryotherapy services in Sonoma County</a>.
-
-    </p>
-
-
-
-    <h2>Who Mobile Cryotherapy Is Best For</h2>
-
-
-
-    <ul>
-
-      <li>Muscle soreness and overuse</li>
-
-      <li>Localized discomfort or inflammation</li>
-
-      <li>Post-workout recovery</li>
-
-      <li>General wellness support</li>
-
-    </ul>
-
-
-
-    <h2>Mobile Cryotherapy in Sonoma County</h2>
-
-
-
-    <p>
-
-      Mobile cryotherapy services are available throughout Sonoma County, including Santa Rosa, Petaluma, Sonoma, Windsor, Healdsburg, and Sebastopol.
-
-    </p>
-
-
-
-    <p>
-
-      This on-site approach provides a flexible alternative to traditional clinic visits, making recovery and wellness more accessible across the region. If you're looking for more details, you can 
-
-      <a href="https://mobilecryopro.com" target="_blank">view available mobile cryotherapy services in Sonoma County</a>.
-
-    </p>
-
-
-
-    <h2>Final Thoughts</h2>
-
-
-
-    <p>
-
-      Both mobile and in-office cryotherapy have their place, but for those seeking targeted treatment, convenience, and a more personalized experience, mobile cryotherapy offers a clear advantage.
-
-    </p>
-
-
-
-    <p>
-
-      You can also explore more about <a href="https://mobilecryopro.com" target="_blank">mobile cryotherapy in Sonoma County</a> to better understand available services and how they compare.
-
-    </p>
+  <main class="site">
+    <header class="topbar">
+      <div class="brand">
+        <span class="green">Sonoma</span> <span class="blue">Cryotherapy Guide</span>
+      </div>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#" class="active">Home</a>
+        <a href="#">What is Cryotherapy?</a>
+        <a href="#">Benefits</a>
+        <a href="#">Types of Treatments</a>
+        <a href="#">Find Providers</a>
+      </nav>
+    </header>
+
+    <section class="hero" aria-label="Hero">
+      <div class="hero-content">
+        <h1>Cryotherapy in Sonoma County:<br />What to Know Before You Book</h1>
+        <p>Learn about the benefits, types of treatments, and local options for cryotherapy.</p>
+      </div>
+    </section>
+
+    <section class="icon-grid" aria-label="Main topics">
+      <a class="icon-card" href="#">
+        <div class="icon blue">❄</div>
+        <h2>What is<br />Cryotherapy?</h2>
+      </a>
+
+      <a class="icon-card" href="#">
+        <div class="icon red">❤</div>
+        <h2>Benefits of<br />Cryotherapy</h2>
+      </a>
+
+      <a class="icon-card" href="#">
+        <div class="icon blue">📍</div>
+        <h2>Types of<br />Cryotherapy</h2>
+      </a>
+
+      <a class="icon-card" href="#">
+        <div class="icon blue">🚐</div>
+        <h2>Mobile vs.<br />In-Clinic</h2>
+      </a>
+    </section>
+
+    <section class="intro">
+      <div class="intro-copy">
+        <h2>Introduction to Cryotherapy</h2>
+        <div class="rule"></div>
+        <p>
+          Curious about cryotherapy? In this guide, we cover how cryotherapy
+          works, its potential benefits, and the different ways you can
+          experience it in Sonoma County.
+        </p>
+      </div>
+
+      <div class="intro-image">
+        <img src="images/cryo-person.jpg" alt="Person experiencing cryotherapy vapor treatment" />
+      </div>
+    </section>
+
+    <section class="feature-grid">
+      <article class="feature-card">
+        <img src="images/who-can-benefit.jpg" alt="Active person stretching outdoors" />
+        <div class="feature-body">
+          <h3>Who Can Cryotherapy Help?</h3>
+          <div class="rule"></div>
+          <p>
+            Discover how cryotherapy may assist with recovery, pain management,
+            and wellness.
+          </p>
+        </div>
+      </article>
+
+      <article class="feature-card">
+        <img src="images/what-to-expect.jpg" alt="Cryotherapy machine with cooling vapor" />
+        <div class="feature-body">
+          <h3>What to Expect in a Session</h3>
+          <div class="rule"></div>
+          <p>
+            Find out what happens during a cryotherapy session and how to prepare.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section class="cta">
+      <h2>Finding Cryotherapy Providers in Sonoma County</h2>
+      <div class="rule"></div>
+      <p>Explore local clinics and mobile services available in Sonoma County...</p>
+      <a href="#" class="btn">Learn More</a>
+    </section>
+  </main>
+</body>
+</html>
 

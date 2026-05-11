@@ -288,6 +288,21 @@ a:hover { text-decoration: underline; }
   height: auto;
 }
 
+.map-card {
+  background: rgba(255,255,255,0.45);
+  border: 1px solid rgba(127,174,214,0.35);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 18px 45px rgba(8,43,87,0.10);
+}
+
+.map-card img {
+  width: 100%;
+  max-width: 440px;
+  display: block;
+  margin: 0 auto;
+}
+
 .county-shape {
   fill: rgba(255,255,255,0.28);
   stroke: #7faed6;

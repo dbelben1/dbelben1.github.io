@@ -444,6 +444,43 @@ a:hover { text-decoration: underline; }
   margin: 24px 0 0;
 }
 
+/* Provider Section */
+
+.provider-section {
+  padding: 70px 0;
+  background: #f7fbff;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+.provider-section p {
+  max-width: 760px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.provider-section h2 {
+  margin-bottom: 18px;
+}
+
+/* Footer Credit */
+
+.footer-credit {
+  text-align: center;
+  margin-top: 26px;
+}
+
+.footer-credit p {
+  color: rgba(255,255,255,0.78);
+  margin: 6px 0;
+}
+
+.footer-credit a {
+  color: var(--white);
+  font-weight: 700;
+}
+
 /* Responsive */
 
 @media (max-width: 920px) {
